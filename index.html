@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Eligibility Finder</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<script>
+function hint(str) {
+	
+	
+	//var str = document.getElementById("email").value;
+	
+    if (str.length == 0) {
+        document.getElementById("email1").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "chint.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>
+
+   	<div class="row">
+
+   		<div class="logo">
+	         <a href="index.html">Eligibility Finder</a>
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation">
+					<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+					<li><a class="smoothscroll" href="#features" title="">Sign Up</a></li>
+					<li><a class="smoothscroll"  href="#pricing" title="">Sign In</a></li>
+					<li><a class="smoothscroll"  href="#faq" title="">About</a></li>					
+										
+				</ul>
+			</nav>
+
+			<a class="menu-toggle" href="#"><span>Menu</span></a>
+   		
+   	</div>   	
+   	
+   </header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">
+
+   	<div class="shadow-overlay"></div>
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+
+	   			<h1>Welcome to Eligibility Finder.</h1>
+	   			<h5>Our awesome Web will make your search a lot easier.</h5>
+
+	   			<a class="button stroke smoothscroll" href="#process" title="">Learn More</a>
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> 
+
+   	 	
+
+   </section> <!-- /intro -->
+
+
+   <!-- Process Section
+   ================================================== -->
+   <section id="process">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve with-bottom-line">
+		
+   			<h1>How it works?</h1>
+   			<p class="lead">First sign up to use then sign in to check eligibility.
+			Enter your matric marks and inter marks.</p>
+
+   		</div>   		
+   	</div>
+   	<div class="row process-content">
+   		<div class="left-side">
+			<br><br>
+			<br><br>
+   			<div class="item" data-item="1">
+   				<h5>Sign Up</h5>
+
+   				<p>Enter Email, Username and Password to Sign up.</p>
+   					
+   			</div>
+
+   			<div class="item" data-item="2">
+
+	   			<h5>Sign In</h5>
+
+	   			<p>Enter Email and Password to check Eligibility Criteria.</p>
+   					
+   			</div>
+   				
+   		</div> <!-- /left-side -->
+   		
+   		<div class="right-side">
+			<br><br>
+			<br><br>
+   			<div class="item" data-item="3">
+
+   				<h5>About </h5>
+
+   				<p>You can easily check in which universities you are eligible and you can apply by just entering your matric and intermediate marks from anywhere.</p>
+   					
+   			</div>
+
+   		
+
+   		</div> <!-- /right-side -->  
+
+   		<div class="image-part"></div>  			
+
+   	</div> <!-- /process-content --> 
+
+   </section> <!-- /process-->    
+
+
+   <!-- features Section
+   ================================================== -->
+	<section id="features">
+
+		<div class="row section-intro">
+   		<div class="col-twelve with-bottom-line">
+	
+   			<h5>Sign Up</h5>
+   			<h1>Registration</h1>
+
+   		<form action="signup.php" method="POST">
+		<br><br>
+		<h2 style="text-align: left; color:white;">EMAIL</h2>
+        <input type = "email" placeholder="abc@xyz.com" name="email" style="width: 50%" required/>
+       <br>
+	   <h2 style="text-align: left; color:white;">USERNAME</h2>
+        <input type = "text" placeholder="user123" name="user" style="width: 50%" required/>
+		<br>
+	   <h2 style="text-align: left; color:white;">PASSWORD</h2>
+        <input type = "password" name="pass" placeholder="PASSWORD" style="width: 50%" required/>
+		<br>
+		<h2 style="text-align: left; color:white;">CONFIRM PASSWORD</h2>
+        <input type = "password" name="cpass" placeholder="CONFIRM PASSWORD" style="width: 50%" required/>
+        <br><br><br>
+		<input type ="submit" class="button" name="signupbtn" value = "REGISTER" style="width: 20%">
+		
+
+		</form>
+
+   		</div>   		
+   	</div>
+
+	</section> <!-- /features -->
+	
+
+	<!-- pricing
+   ================================================== -->
+
+   <section id="pricing">
+
+   	<div class="row section-intro">
+   		<div class="col-twelve with-bottom-line">
+
+   		<h1>Sign In</h1>
+		<form action="lol.php" method="POST">
+        <h2 style="text-align: left;" >EMAIL</h2>
+		<input type = "email" placeholder="abc@xyz.com"  id="email" name="email" style="width: 50%" onkeyup="hint(this.value)"  required>
+		<p style="text-align: left;">Existed Emails:: <span id="txtHint"><br></span></p><br>      
+		<h2 style="text-align: left;">PASSWORD</h2>
+        <input type = "password" name="pass" id="pass" placeholder="PASSWORD" style="width: 50%"  required><br/>
+        <input type ="submit" class="button" name="login" value = "LOG IN" style="width: 20%">
+		<a class="button" href="#features" style="width: 20%">SIGN UP</a> 
+		
+
+      </form>
+
+   			
+
+   		</div>   		
+   	</div>
+
+   
+
+   </section> <!-- /pricing --> 
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+   	<div class="row">
+   		<div class="col-twelve">
+   			<h2 class="h01">Developers</h2>
+   		</div>   		
+   	</div>   	
+
+      <div class="row flex-container">
+    
+         <div id="testimonial-slider" class="flexslider">
+
+            <ul class="slides">
+
+               <li>
+               	<div class="testimonial-author">
+                    	<img src="images/avatars/usman.jpg" >
+                    	<div class="author-info">
+                    		Usman Dilbahar
+                    		<span class="position">Developer.</span>
+                    	</div>
+                  </div>
+
+                  <p>
+                    <br>Usman Dilbahar<br>
+					REG.NO L1F14bscs0077<br>
+					COURSE WAD
+                  </p>                  
+             	</li> <!-- /slide -->
+
+               <li> 
+
+               	<div class="testimonial-author">
+                    	<img src="images/avatars/alvi.jpg">
+                    	<div class="author-info">
+                    		Sohaib alvi
+                    		<span>Developer</span>
+                    	</div>
+                  </div> 
+
+                  <p>
+					<br>Sohaib alvi<br>
+					REG.NO L1F15BSCS0232<br>
+					COURSE WAD    
+                  </p>
+                                         
+               </li> <!-- /slide -->
+			
+            </ul> <!-- /slides -->
+
+         </div> <!-- /testimonial-slider -->         
+        
+      </div> <!-- /flex-container -->
+
+   </section> <!-- /testimonials -->
+
+
+   <!-- faq
+   ================================================== -->
+   <section id="faq">
+
+   	<div class="row section-intro">
+   		<div class="col-twelve with-bottom-line">
+
+   			<h5>Faq</h5>
+   			<h1>Questions and Answers.</h1>
+
+   			<p class="lead"><h2>Welcome to Eligibility Finder</h2><br>We are providing you a free service from anywhere around the globe you can check whether you are eligible or not from you home
+			<br><br><h2>Eligibility Finder-Very Easy to Use</h2><br>To use our services You just have to Sign up and log in to our website<br>Just Enter your matriculation marks and intermediate marks<br>We will find best suitable universities for You !!</p>
+
+   		</div>   		
+   	</div>
+		
+
+   </section> <!-- /faq --> 
+
+  
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+   	<div class="footer-main">
+
+   		<div class="row">  
+
+	      	<div class="col-four tab-full mob-full footer-info">            
+				<h4>Contact Us </h4>
+	            <div class="footer-logo"></div>
+				
+	            <p>
+		        	University of Central Punjab <br>
+					Khayaban-e-Jinnah, Lahore<br>
+		        	ikhlaq.ahmad@ucp.edu.pk &nbsp; <br>+92-313-6307006
+		        	</p>
+
+		      </div> <!-- /footer-info -->
+
+	
+	      	<div class="col-two tab-1-3 mob-1-2 social-links">
+
+	      		<h4>Social</h4>
+
+	      		<ul>
+	      			<li><a href="https://twitter.com/">Twitter</a></li>
+						<li><a href="https://www.facebook.com/">Facebook</a></li>
+						<li><a href="https://www.youtube.com/">Youtube</a></li>
+						<li><a href="https://plus.google.com">Google+</a></li>
+						<li><a href="https://www.linkedin.com/uas/login">Linkedin</a></li>
+					</ul>
+	      	           	
+	      	</div> <!-- /social --> 
+
+	      	<div class="col-four tab-1-3 mob-full footer-subscribe">
+
+	      		<h4>Subscribe</h4>
+
+	      		<p>Keep yourself updated. Subscribe to our newsletter.</p>
+
+	      		<div class="subscribe-form">
+	      	
+	      			<form id="mc-form" class="group" novalidate="true">
+
+							<input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="type email &amp; hit enter" required=""> 
+	   		
+			   			<input type="submit" name="subscribe" >
+		   	
+		   				<label for="mc-email" class="subscribe-message"></label>
+			
+						</form>
+
+	      		</div>	      		
+	      	           	
+	      	</div> <!-- /subscribe -->         
+
+	      </div> <!-- /row -->
+
+   	</div> <!-- /footer-main -->
+
+
+      <div class="footer-bottom">
+
+      	<div class="row">
+
+      		<div class="col-twelve">
+	      		<div class="copyright">
+		         	<span>© Copyright 4Tech 2017.</span> 
+		         	<span>Design by 4Tech</span>		         	
+		         </div>
+
+		         <div id="go-top" style="display: block;">
+		            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon ion-android-arrow-up"></i></a>
+		         </div>         
+	      	</div>
+
+      	</div> <!-- /footer-bottom -->     	
+
+      </div>
+
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-1.11.3.min.js"></script>
+   <script src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>

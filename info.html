@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Eligibility Finder</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+	/*$(document).ready(function(){
+	$('#nextmatric').click(function(){
+		$("#matric").hide();
+		$("#inter").show();
+		
+		
+	});
+	});*/
+	
+	
+	
+	$(document).ready(function(){
+	$('#nextmatric').click(function(){
+	
+//	var obtn_marks = ;
+	//var tot_marks = ;
+	if(document.getElementById("omarks").value < document.getElementById("tmarks").value )
+	{
+		$("#matric").hide();
+		$("#inter").show();return
+	
+	}
+	else
+	{
+		alert("Enter valid no");//return
+	}
+		
+		
+		
+	});
+	});
+	
+	$(document).ready(function(){
+	$('#submit1').click(function(){
+	
+//	var obtn_marks = ;
+	//var tot_marks = ;
+	if(document.getElementById("interomarks").value < document.getElementById("intertmarks").value )
+	{
+	$("#inter").hide();
+	$("#su").show();
+	}
+	else
+	{
+	//$("#matric").show();
+	alert("Enter valid obtain no");//return
+	$("#inter").show();
+	}
+		
+		
+		
+	});
+	});
+	
+	
+	</script>
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>
+
+   	<div class="row">
+		
+	
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation">
+					<li class="current"><a class="smoothscroll"  href="index.html" title="">LOg Out</a></li>
+					<li><a class="smoothscroll"  href="#faq" title="">About</a></li>					
+										
+				</ul>
+			</nav>
+			<a class="menu-toggle" href="#"><span>Menu</span></a>
+   	</div>   	
+   </header> <!-- /header -->
+
+	
+   <!-- features Section
+   ================================================== -->
+	<section id="features">
+
+		<div class="row section-intro">
+   		<div class="col-twelve with-bottom-line">
+
+   		<h5>Educational Detail</h5>
+   			
+		<form  action="info.php" method="POST" >
+   		<fieldset id="matric" >
+		
+			<h1>Matric Marks</h1>
+			<br><br>
+			<h2 style="text-align: left; color:white;">Obtain Marks</h2>
+			<input type = "number" placeholder="700"  id="omarks" name="omarks" style="width: 50%"   required />
+		   
+			<h2 style="text-align: left; color:white;">Total Marks</h2>
+			<input  type = "number" placeholder="850" id="tmarks" name="tmarks" style="width: 50%" required/>
+			<input type ="button" class="button" id="nextmatric" name="nextmatric" value = "NEXT" style="width: 20%">
+		</fieldset>
+			<br>
+
+		
+		<fieldset id="inter" hidden>
+			<h1>Intermediate Marks</h1>
+			<br><br>
+			<h2 style="text-align: left; color:white;">Obtain Marks</h2>
+			<input type = "number" placeholder="1000"  id="interomarks" name="interomarks" style="width: 50%" required/>
+	   
+			<h2 style="text-align: left; color:white;">Total Marks</h2>
+			<input type = "number" placeholder="1100" id="intertmarks" name="intertmarks" style="width: 50%" required/>
+			
+			<br><br><br>
+			<input type ="button" class="button" id="submit1" name="submit1" value = "NEXT" style="width: 20%" >
+			
+			</fieldset>
+<fieldset id="su" hidden>
+<input type ="submit" class="button" id="submit" name="submit" value = "Submit" style="width: 20%" >
+	</fieldset>
+		</form>
+
+
+   		</div>   		
+   	</div>
+
+	</section> <!-- /features -->
+	
+ <section id="faq">
+
+   	<div class="row section-intro">
+   		<div class="col-twelve with-bottom-line">
+
+   			<h5>Faq</h5>
+   			<h1>Questions and Answers.</h1>
+
+   			<p class="lead"><h2>Welcome to Eligibility Finder</h2><br>We are providing you a free service from anywhere around the globe you can check whether you are eligible or not from you home
+			<br><br><h2>Eligibility Finder-Very Easy to Use</h2><br>To use our services You just have to Sign up and log in to our website<br>Just Enter your matriculation marks and intermediate marks<br>We will find best suitable universities for You !!</p>
+   		</div>   		
+   	</div>
+		
+
+   </section> <!-- /faq --> 
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+   	<div class="footer-main">
+
+   		<div class="row">  
+
+	      	<div class="col-four tab-full mob-full footer-info">            
+				<h4>Contact Us </h4>
+	            <div class="footer-logo"></div>
+				
+	            <p>
+		        	University of Central Punjab <br>
+					Khayaban-e-Jinnah, Lahore<br>
+		        	ikhlaq.ahmad@ucp.edu.pk &nbsp; <br>+92-313-6307006
+		        	</p>
+
+		      </div> <!-- /footer-info -->
+
+	
+	      	<div class="col-two tab-1-3 mob-1-2 social-links">
+
+	      		<h4>Social</h4>
+
+	      		<ul>
+	      			<li><a href="https://twitter.com/">Twitter</a></li>
+						<li><a href="https://www.facebook.com/">Facebook</a></li>
+						<li><a href="https://www.youtube.com/">Youtube</a></li>
+						<li><a href="https://plus.google.com">Google+</a></li>
+						<li><a href="https://www.linkedin.com/uas/login">Linkedin</a></li>
+					</ul>
+	      	           	
+	      	</div> <!-- /social --> 
+
+	      	<div class="col-four tab-1-3 mob-full footer-subscribe">
+
+	      		<h4>Subscribe</h4>
+
+	      		<p>Keep yourself updated. Subscribe to our newsletter.</p>
+
+	      		<div class="subscribe-form">
+	      	
+	      			<form id="mc-form" class="group" novalidate="true">
+
+							<input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="type email &amp; hit enter" required=""> 
+	   		
+			   			<input type="submit" name="subscribe" >
+		   	
+		   				<label for="mc-email" class="subscribe-message"></label>
+			
+						</form>
+
+	      		</div>	      		
+	      	           	
+	      	</div> <!-- /subscribe -->         
+
+	      </div> <!-- /row -->
+
+   	</div> <!-- /footer-main -->
+
+
+      <div class="footer-bottom">
+
+      	<div class="row">
+
+      		<div class="col-twelve">
+	      		<div class="copyright">
+		         	<span>© Copyright 4Tech 2017.</span> 
+		         	<span>Design by 4Tech</span>		         	
+		         </div>
+
+		         <div id="go-top" style="display: block;">
+		            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon ion-android-arrow-up"></i></a>
+		         </div>         
+	      	</div>
+
+      	</div> <!-- /footer-bottom -->     	
+
+      </div>
+
+   </footer>  
+   
+   
+
+</body>
+
+</html>
